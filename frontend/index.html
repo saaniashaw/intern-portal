@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Intern Portal Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to the Intern Portal</h1>
+    <p>Please enter your name to continue</p>
+    <input type="text" id="internNameInput" placeholder="Enter your name" />
+    <br><br>
+    <button onclick="goToDashboard()">Continue</button>
+  </div>
+
+  <script>
+    function goToDashboard() {
+      const name = document.getElementById('internNameInput').value.trim();
+      if (name === "") {
+        alert("Please enter your name.");
+        return;
+      }
+      // You can optionally save the name to localStorage if needed
+      window.location.href = "dashboard.html";
+    }
+  </script>
+</body>
+</html>
